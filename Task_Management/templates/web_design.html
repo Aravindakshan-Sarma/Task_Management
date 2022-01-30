@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Task Management{% endblock %}
+
+
+{% block content %}
+<h2 style="color: rgb(229, 255, 0);">Assignment Details</h2>
+<ul>
+{% for task_app in task_apps %}
+    <li><h5 style="color: rgb(143, 14, 14);">{{ task_app.Task_Name }}</h5></li>
+    <hr style="width:50%;text-align:left;margin-left:0"> 
+    <li>{{ task_app.Task_Description }}</li>
+    <li>{{ task_app.Task_Type }}</li>
+    <li>{{ task_app.Task_Grade }}</li>
+    <li>{{ task_app.Due_Date }}</li>
+    <br>
+{% endfor %}
+</ul>
+{% endblock %}

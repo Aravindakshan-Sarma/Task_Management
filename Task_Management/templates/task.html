@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Task Item{% endblock %}
+
+{% block content %}
+<!-- <img src="{% static 'example_app/brownie.png' %}" alt="brownie"> -->
+<center><img src="{% static 'Task_App/webpic.png' %}" alt="webpic" height="500" width="1430"></center>
+<p><center><h2>Please use the following form to create the Assignment</h2></center></p>
+<form action="{% url 'task' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+<script> 
+    flatpickr("#id_Due_Date", {enableTime: true, dateFormat: "Y-m-d H:i"}); 
+</script>
+{% endblock %}

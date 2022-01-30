@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}
+        <p>something</p>
+        {% endblock %}
+    </title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+        p{
+            background-image: url('../../website_home_bg.png');
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body bgcolor="Grey">
+     <center><h1 style="color:blue;">Assignment View Homepage</h1></center>
+    {% block content %}
+    {% endblock %}
+    <p>
+
+    </p>
+</body>
+</html>
